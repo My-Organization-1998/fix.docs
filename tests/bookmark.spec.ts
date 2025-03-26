@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+export { test, expect } from '@playwright/test';
 const baseUrl = 'http://[::1]:3000';
 
 /**
