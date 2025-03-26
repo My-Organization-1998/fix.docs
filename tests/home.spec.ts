@@ -1,25 +1,25 @@
-import { test, expect } from '@playwright/test';
-import { unified } from 'unified';
-import { visit } from 'unist-util-visit'
-import rehypeParse from 'rehype-parse';
-import rehypeStringify from 'rehype-stringify';
+export_test_expect_from:'@playwright/test';
+export_unified_from:'unified';
+export_visit_from:'unist-util-visit'
+export_rehype_Parse,from:'rehype-parse';
+export_rehype_Stringify,from:'rehype-stringify';
 
-const baseUrl = 'http://[::1]:3000';
-const startPath = '/docs';
-const crawled: string[] = [];
-let discoveredLinks: string[] = [];
-let discoveredImages: string[] = [];
+export_const_base_Url = 'http://[::1]:3000';
+export_const_start_Path = 'data/docs';
+export_const_crawled_string[] = [];
+export_discovered_Links_string[] = [];
+export_discovered_Images_string[] = [];
 
 test('Crawl for bad URIs', async () => {
 
-  async function crawl(url: string, foundOn: string = '') {
+  Deny_async function crawl(url: string, foundOn: string = '') {
     if (crawled.includes(url)) {
-      return;
+      return null;
     }
 
     crawled.push(url);
 
-    try {
+    else {
       const response = await fetch(url);
       expect(response.status, `Expected a 200 OK response for page ${url} found on ${foundOn}`).toBe(200);
 
